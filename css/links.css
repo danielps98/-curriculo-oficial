@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00274d, #003f7d);
+}
+
+.container {
+    text-align: center;
+    background-color: #b5aae9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-image {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-pic {
+    width: 100%;
+    height: auto;
+}
+
+.profile-section {
+    position: relative;
+    padding: 20px;
+    margin-top: -50px; /* Ajusta a sobreposição da imagem de perfil */
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: relative;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.description {
+    color: #777;
+    font-size: 16px;
+}
+
+.buttons {
+    padding: 20px;
+}
+
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Sem cor de fundo */
+    color: #007BFF; /* Cor do texto */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #007BFF; /* Adiciona uma borda de cor azul */
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+    text-align: left; /* Garante que o texto e os ícones estejam alinhados à esquerda */
+}
+
+.button img {
+    width: 30px; /* Tamanho da imagem quadrada */
+    height: 30px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.button::after {
+    content: '→'; /* Adiciona a seta para a direita */
+    font-size: 16px;
+    margin-left: auto; /* Faz a seta se mover para o final do botão */
+    display: inline-block; /* Faz com que a seta seja tratada como um bloco inline */
+}
+
+.button:hover {
+    color: #0056b3; /* Cor do texto ao passar o mouse */
+    border-color: #0056b3; /* Cor da borda ao passar o mouse */
+}
+
+.button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Altura do risco embaixo do botão */
+    background-color: #007BFF; /* Cor do risco */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
